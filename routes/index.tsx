@@ -1,19 +1,25 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Counter from "../islands/Counter.tsx";
+import Logo from "../components/Logo.tsx";
+import UploadFileView from "../components/UploadFileView.tsx";
+import Banner from "../components/util/Banner.tsx";
 
 export default function Home() {
   return (
-    <div class={tw`flex h-screen justify-center items-center`}>
-        <div class={tw`flex items-center container h-4/6`}>
-            <div className={tw`text-center container md h-full bg-red-400`}>
-                Vasak
-            </div>
-            <div className={tw`text-center container md h-full bg-yellow-400`}>
-                Parem
-            </div>
-        </div>
-    </div>
+      <div className={tw`flex flex-col h-screen justify-center items-center`}>
+          <div className={tw`flex justify-center items-center container`}>
+              <Banner message={"Like the page? Give us feedback on how we could improve!"} mobileViewMessage={"Leave us feedback!"}/>
+          </div>
+          <div className={tw`flex h-screen justify-center items-center container h-4/6`}>
+              <div className={tw`text-center container h-full border-solid border-2 border-indigo-900 shadow-2xl`}>
+                  <Logo />
+              </div>
+              <div className={tw`container h-full border-solid border-2 border-indigo-900 shadow-2xl bg-[#e7e5e4]`}>
+                  <UploadFileView />
+              </div>
+          </div>
+      </div>
+
   );
 }
