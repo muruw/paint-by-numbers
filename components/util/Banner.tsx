@@ -5,6 +5,7 @@ import { tw } from "@twind";
 interface BannerProps {
     message: string;
     mobileViewMessage: string;
+    close: () => void;
 }
 
 export default function Banner(props: BannerProps) {
@@ -33,7 +34,7 @@ export default function Banner(props: BannerProps) {
                         <a href="#" className={tw`flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50`}>Learn more</a>
                     </div>
                     <div className={tw`order-2 flex-shrink-0 sm:order-3 sm:ml-3`}>
-                        <button type="button" className={tw`-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2`}>
+                        <button onClick={props.close} type="button" className={tw`-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2`}>
                             <span className={tw`sr-only`}>Dismiss</span>
                             <svg className={tw`h-6 w-6 text-white`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
