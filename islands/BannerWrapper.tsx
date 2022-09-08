@@ -1,20 +1,16 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
 import Banner from "../components/util/Banner.tsx";
-import { useState } from "https://esm.sh/stable/preact@10.10.0/deno/hooks.js";
+import { useSignal } from "@preact/signals";
 
 export default function BannerWrapper() {
-    const [state, setState] = useState({
-        closed: false
-    });
-    const handleClose = () => {
-        setState({...state, closed: !state.closed});
+    const showBanner = useSignal(true);
+
+    const handleClose = (): void => {
+        showBanner.value = !showBanner.value;
     }
 
     return (
-        <div className={tw`flex justify-center items-center container`}>
-            {!state.closed && (
+        <div className="flex justify-center items-center container">
+            {showBanner.value && (
                 <Banner message={"Like the page? Give us feedback on how we could improve!"} mobileViewMessage={"Leave us feedback!"} close={handleClose} />)}
         </div>
     );
