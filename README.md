@@ -21,4 +21,4 @@ This project uses Twind, which is a small compiler (~13kB) that converts Tailwin
 
 [Twind colors list.](https://twind.dev/api/modules/twind_colors.html) It exposes all Tailwind.css v2 colors
 
-Base styling is set in utils/twind.ts
+Base styling is set in ./twind.config.ts
