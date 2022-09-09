@@ -1,5 +1,9 @@
 ## PAINT BY NUMBERS
 
+### Latest version
+
+![2022-09-09](./static/progress/2022-09-09.png)
+
 ### Usage
 
 Start the project:
