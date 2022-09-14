@@ -20,7 +20,7 @@ export default function DragAndDropUpload({ imageState }: ComponentProps) {
         <img
           src={imageState.value.imageVisual}
           alt="User's uploaded image"
-          class="object-contain max-h-full"
+          class="object-contain max-h-full m-2"
         />
       </div>
     );
