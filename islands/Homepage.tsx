@@ -12,7 +12,6 @@ export default function Homepage() {
   const uploadedImageState = signal<UploadImage>({
     imageFile: "",
     imageVisual: "",
-
   });
 
   return (

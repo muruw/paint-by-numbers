@@ -20,7 +20,6 @@ In IntelliJ, import code style by navigating to
 
 Code style -> Javascript -> Set from (Google Javascript Style Guide)
 
-
 ### Formatter & Linter
 
 Start the project:
@@ -28,11 +27,13 @@ Start the project:
 ```
 deno fmt
 ```
+
 [More info: Deno built in formatter](https://deno.land/manual@v1.25.2/tools/formatter)
 
 ```
 deno lint
 ```
+
 [More info: Deno built in linter](https://deno.land/manual@v1.25.2/tools/linter)
 
 This will watch the project directory and restart as necessary.
