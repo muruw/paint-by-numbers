@@ -14,6 +14,18 @@ export default function DragAndDropUpload({ imageState }: ComponentProps) {
     };
   };
 
+  if (imageState.value.imageVisual) {
+    return (
+      <div class="flex justify-center relative h-3/4 border-dotted border-2 border-gray-400">
+        <img
+          src={imageState.value.imageVisual}
+          alt="User's uploaded image"
+          class="object-contain max-h-full"
+        />
+      </div>
+    );
+  }
+
   return (
     <div class="relative h-3/4 border-dotted border-2 border-gray-400
                     hover:bg-indigo-800 hover:text-white transition ease-in-out">
