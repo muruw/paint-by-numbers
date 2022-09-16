@@ -1,6 +1,6 @@
 import ImageIcon from "./util/icons/ImageIcon.tsx";
 import BrushIcon from "./util/icons/BrushIcon.tsx";
-import LoadingIcon from './util/icons/LoadingIcon.tsx';
+import LoadingIcon from "./util/icons/LoadingIcon.tsx";
 
 export default function InstructionsView() {
   const iconSize = { width: "16", height: "16" };
