@@ -1,5 +1,5 @@
 import BannerWrapper from "./BannerWrapper.tsx";
-import Logo from "../components/Logo.tsx";
+import HomepageLeftView from "../components/HomepageLeftView.tsx";
 import { signal } from "@preact/signals";
 import ImageView from "../components/ImageView.tsx";
 
@@ -12,7 +12,6 @@ export default function Homepage() {
   const uploadedImageState = signal<UploadImage>({
     imageFile: "",
     imageVisual: "",
-
   });
 
   return (
@@ -20,7 +19,7 @@ export default function Homepage() {
       <BannerWrapper />
       <div className="flex h-screen justify-center items-center container h-4/6 shadow-2xl border-indigo-900 border-solid border-2">
         <div className="text-center container h-full ">
-          <Logo imageState={uploadedImageState} />
+          <HomepageLeftView imageState={uploadedImageState} />
         </div>
         <div className="container h-full bg-[#e7e5e4]">
           <ImageView imageState={uploadedImageState} />
