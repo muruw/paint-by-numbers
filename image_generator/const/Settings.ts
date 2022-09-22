@@ -29,4 +29,20 @@ export class Settings {
   public resizeImageHeight = 1024;
 
   public randomSeed: number = new Date().getTime();
+
+  public outputProfiles: CLISettingsOutputProfile[] = [];
+}
+
+export class CLISettingsOutputProfile {
+  public name = "";
+  public svgShowLabels = true;
+  public svgFillFacets = true;
+  public svgShowBorders = true;
+  public svgSizeMultiplier = 3;
+
+  public svgFontSize = 60;
+  public svgFontColor = "black";
+
+  public filetype: "svg" | "png" | "jpg" = "svg";
+  public filetypeQuality = 95;
 }
