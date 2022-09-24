@@ -49,3 +49,5 @@ Tailwind utility classes into CSS at runtime.
 all Tailwind.css v2 colors
 
 Base styling is set in ./twind.config.ts
+
+[![Made with Fresh](https://fresh.deno.dev/fresh-badge-dark.svg)](https://fresh.deno.dev)
