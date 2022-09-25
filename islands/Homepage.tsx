@@ -1,17 +1,17 @@
 import BannerWrapper from "./BannerWrapper.tsx";
 import HomepageLeftView from "../components/HomepageLeftView.tsx";
 import { signal } from "@preact/signals";
-import ImageView from "../components/ImageView.tsx";
+import ImageUploadView from "../components/ImageUploadView.tsx";
 
 export interface UploadImage {
-  imageVisual: string;
-  imageFile: string;
+  image: string;
+  file: string;
 }
 
 export default function Homepage() {
   const uploadedImageState = signal<UploadImage>({
-    imageFile: "",
-    imageVisual: "",
+    file: "",
+    image: "",
   });
 
   return (
@@ -22,7 +22,7 @@ export default function Homepage() {
           <HomepageLeftView />
         </div>
         <div className="container h-full bg-[#e7e5e4]">
-          <ImageView imageState={uploadedImageState} />
+          <ImageUploadView imageState={uploadedImageState} />
         </div>
       </div>
     </div>

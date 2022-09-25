@@ -9,7 +9,7 @@ export default function InstructionsView() {
     <div className="flex flex-col h-full justify-center items-center text-white space-y-8">
       <div className="flex flex-row">
         <ImageIcon size={iconSize} />
-        <p className="text-xl self-center p-2">Upload you image</p>
+        <p className="text-xl self-center p-2">Upload your image</p>
       </div>
       <div className="flex flex-row">
         <LoadingIcon size={iconSize} />
