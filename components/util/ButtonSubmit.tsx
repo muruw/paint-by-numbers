@@ -5,10 +5,11 @@ interface ButtonSubmitProps {
   label: string;
   // sm, md, lg, xl, 2xl - same as Tailwind sizes
   size?: string;
+  className?: string;
 }
 
 export default function ButtonSubmit(
-  { label, onButtonClick, size }: ButtonSubmitProps,
+  { label, onButtonClick, size, className }: ButtonSubmitProps,
 ) {
   const fontSize = size ? `text-${size}` : "text-sm";
 
@@ -16,7 +17,7 @@ export default function ButtonSubmit(
     <ButtonBase
       label={label}
       onButtonClick={onButtonClick}
-      classStyle={`rounded-md border border-transparent bg-white px-4 py-2 ${fontSize} font-medium text-indigo-600 shadow-sm hover:bg-indigo-50 focus:outline-none`}
+      classStyle={`rounded-md border border-transparent bg-white px-4 py-2 ${fontSize} font-medium text-indigo-600 shadow-sm hover:bg-indigo-600 hover:text-white transition ease-in-out focus:outline-none ${className}`}
     />
   );
 }

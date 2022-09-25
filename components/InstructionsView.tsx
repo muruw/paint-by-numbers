@@ -1,14 +1,9 @@
 import ImageIcon from "./util/icons/ImageIcon.tsx";
 import BrushIcon from "./util/icons/BrushIcon.tsx";
 import LoadingIcon from "./util/icons/LoadingIcon.tsx";
-import ButtonSubmit from "./util/ButtonSubmit.tsx";
 
 export default function InstructionsView() {
   const iconSize = { width: "12", height: "12" };
-
-  const generateImage = () => {
-    console.log("Started the generation of image");
-  };
 
   return (
     <div className="flex flex-col h-full justify-center items-center text-white space-y-8">
@@ -26,7 +21,6 @@ export default function InstructionsView() {
         <BrushIcon size={iconSize} />
         <p className="text-xl self-center p-2">Place your order</p>
       </div>
-      <ButtonSubmit label="Process image" onButtonClick={generateImage} />
     </div>
   );
 }

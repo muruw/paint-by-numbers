@@ -1,5 +1,4 @@
-import {Settings} from './const/Settings.ts';
+import { Settings } from "./const/Settings.ts";
 
-export function createSvg(settings: Settings, ) {
-
+export function createSvg(settings: Settings) {
 }
