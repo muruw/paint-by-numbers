@@ -10,7 +10,7 @@ export default function DragAndDropUpload({ imageState }: ComponentProps) {
     const [file] = e.target.files;
     imageState.value = {
       file: e.target.value,
-      image: URL.createObjectURL(file),
+      imageSrc: URL.createObjectURL(file),
     };
   };
 

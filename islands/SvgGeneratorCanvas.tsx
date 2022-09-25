@@ -1,33 +1,20 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-} from "https://esm.sh/stable/preact@10.10.6/deno/hooks.js";
-import {
-  Signal,
-} from "https://esm.sh/v94/@preact/signals@1.0.3/X-ZS8q/deno/signals.js";
-import { UploadImage } from "./Homepage.tsx";
+import { useEffect, useRef } from "preact/hooks";
 
 interface SvgGeneratorProps {
-  imageState: Signal<UploadImage>;
+  imageSrc: string;
 }
+
 const DEFAULT_CANVAS_SIZE = { width: 500, height: 500 };
 
-export default function SvgGeneratorField({ imageState }: SvgGeneratorProps) {
+export default function SvgGeneratorCanvas({ imageSrc }: SvgGeneratorProps) {
   const canvas = useRef();
-
-  const [imageValState, setImageValState] = useState({
-    width: 500,
-    height: 500,
-  });
 
   useEffect(() => {
     const context = canvas.current.getContext("2d");
     const img = new Image();
-    img.src = imageState.value.image;
+    img.src = imageSrc;
 
     img.onload = () => {
-      setImageValState({ width: img.naturalWidth, height: img.naturalHeight });
       context.drawImage(
         img,
         0,
