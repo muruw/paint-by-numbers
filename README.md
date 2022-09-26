@@ -2,7 +2,8 @@
 
 ### Latest version
 
-![2022-09-09](./static/progress/2022-09-09.png)
+![2022-09-26-1](./static/progress/2022-09-26-1.png)
+![2022-09-26-2](./static/progress/2022-09-26-2.png)
 
 ### Usage
 
