@@ -4,14 +4,14 @@ import { signal } from "@preact/signals";
 import ImageUploadView from "../components/ImageUploadView.tsx";
 
 export interface UploadImage {
-  image: string;
+  imageSrc: string;
   file: string;
 }
 
 export default function Homepage() {
   const uploadedImageState = signal<UploadImage>({
     file: "",
-    image: "",
+    imageSrc: "",
   });
 
   return (

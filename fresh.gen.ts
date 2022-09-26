@@ -9,7 +9,7 @@ import * as $2 from "./routes/index.tsx";
 import * as $$0 from "./islands/BannerWrapper.tsx";
 import * as $$1 from "./islands/DragAndDropUpload.tsx";
 import * as $$2 from "./islands/Homepage.tsx";
-import * as $$3 from "./islands/SvgGeneratorField.tsx";
+import * as $$3 from "./islands/SvgGeneratorCanvas.tsx";
 import * as $$4 from "./islands/UploadedImage.tsx";
 
 const manifest = {
@@ -22,7 +22,7 @@ const manifest = {
     "./islands/BannerWrapper.tsx": $$0,
     "./islands/DragAndDropUpload.tsx": $$1,
     "./islands/Homepage.tsx": $$2,
-    "./islands/SvgGeneratorField.tsx": $$3,
+    "./islands/SvgGeneratorCanvas.tsx": $$3,
     "./islands/UploadedImage.tsx": $$4,
   },
   baseUrl: import.meta.url,

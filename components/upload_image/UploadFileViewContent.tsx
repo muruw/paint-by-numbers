@@ -10,7 +10,7 @@ interface UploadFileViewContentProps {
 export default function UploadFileViewContent(
   { imageState }: UploadFileViewContentProps,
 ) {
-  if (imageState.value.image) {
+  if (imageState.value.imageSrc) {
     return <UploadedImage imageState={imageState} />;
   }
   return <DragAndDropUpload imageState={imageState} />;
